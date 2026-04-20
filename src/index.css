@@ -27,6 +27,8 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #900000;
+  background: url('./assets/elearning-background-img.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
