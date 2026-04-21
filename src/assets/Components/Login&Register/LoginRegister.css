@@ -29,7 +29,7 @@
     translate: -400px;
 }
 
-.wrapper.from-box.register{
+.wrapper .from-box.register{
     position: absolute;
     transition: none;
     translate: 400px;
