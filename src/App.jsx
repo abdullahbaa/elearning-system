@@ -6,9 +6,12 @@ import Dashboard from "./assets/Components/Allpages/Dashboard"
 import MyCourse from "./assets/Components/Allpages/MyCourses"
 import AllCourses from "./assets/Components/Allpages/AllCourses"
 import CourseVideos from "./assets/Components/Allpages/Course-Videos"
+import AllCourses from "./assets/Components/Allpages/AllCourses/AllCourses";
+import CourseVideos from "./assets/Components/Allpages/Course-Videos/CourseVideos";
+const AllCourses: React.FC = () => {
+  return <AllCourses/>;
+};
 function App() {
-  
-
   return (
     <>
       <div>
@@ -22,6 +25,12 @@ function App() {
           <Route path="/All Courses" element={<AllCourses/>}/>
           <Route path="/Course Videos" element={<CourseVideos/>}/>
         </Routes>
+        <Dashboard/>
+        <MyCourse/>
+        <AllCourses/>
+        <CourseVideos/>
+
+
         
       </div>
     </>
