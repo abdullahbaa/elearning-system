@@ -1,27 +1,3 @@
-// import { Routes, Route } from "react-router";
-// // import Navbar from './assets/Components/Allpages/Navbar/Navbar'
-// import LoginRegister from "./assets/Components/Login&Register/LoginRegister";
-// import { AuthProvider } from "./assets/Components/Context/AuthContext";
-
-// function App() {
-//   return (
-//     <>
-//       <div>
-//         <AuthProvider>
-//           <LoginRegister />
-//         </AuthProvider>
-//       </div>
-//     </>
-//   );
-// }
-
-// export default App;
-
-
-
-
-
-
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider } from './assets/Components/Context/AuthContext';
 import LoginRegister from './assets/Components/Login&Register/LoginRegister';
@@ -37,7 +13,7 @@ import ProtectedRoute from './assets/Components/Context/ProtectedRoute';
 function App() {
   return (
       <AuthProvider>
-        <Navbar />
+        <Navbar/>
          <main className="max-w-7xl mx-auto px-4 py-8">
         <Routes>
           {/* Public routes */}
@@ -54,7 +30,7 @@ function App() {
             <Route path="/course-videos" element={<CourseVideos />} />
           </Route>
 
-          {/* Optional: redirect unknown paths to home */}
+          {/* paths to home */}
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
         </main>

@@ -1,16 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 @import "tailwindcss";
 
+@source "../src/**/*.{js,ts,jsx,tsx}";
+
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
+  background-color: #0f2a2f;
 }
 
-/* Remove the flex centering from body */
 body {
   font-family: "Exo 2", sans-serif;
   min-height: 100vh;
-  background: url('./assets/elearning-background-img.jpg') no-repeat center/cover fixed;
-  /* background-attachment: fixed keeps the image in place */
 }

@@ -4,9 +4,8 @@ import { useAuth } from '../../Context/AuthContext';
 const HomePage: React.FC = () => {
   const { currentUser } = useAuth();
 
-  // Replace with real data from Firestore later
   return (
-    <div>
+    <div className='text-white'>
       <h1>Home</h1>
       {currentUser ? (
         <div>
@@ -14,8 +13,8 @@ const HomePage: React.FC = () => {
           {/* Below you can fetch from Firestore */}
           <img src="https://w7.pngwing.com/pngs/241/840/png-transparent-computer-icons-student-school-student-angle-people-logo-thumbnail.png" alt="Student" width={100} />
           <p>Student ID: 12345</p>
-          <p>Student Name: John Doe</p>
-          <p>Current CGPA: 3.75</p>
+          <p>Student Name: Abdulah Bin Abdul Aziz</p>
+          <p>Current CGPA: 3.67</p>
         </div>
       ) : (
         <p>Loading user...</p>
