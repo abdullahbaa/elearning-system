@@ -1,8 +1,8 @@
-// Import the functions you need from the SDKs you need
+
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
-// Your web app's Firebase configuration
+//  Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyCkoKMSZz9gMwZ855BJUmqVCB6r5KA-0zg",
   authDomain: "e-learning-33aa2.firebaseapp.com",

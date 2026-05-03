@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, Link, useLocation, Navigate } from "react-router-dom";
 import { FaUserAlt, FaLock, FaEnvelope, FaEye, FaEyeSlash } from "react-icons/fa";
-import { useAuth } from "../Context/AuthContext"; // <-- adjust path if needed
+import { useAuth } from "../Context/AuthContext"; 
 
 const LoginRegister: React.FC = () => {
   const location = useLocation();
@@ -23,13 +23,12 @@ const LoginRegister: React.FC = () => {
   const [regError, setRegError] = useState("");
   const [loading, setLoading] = useState(false);
 
-  // Clear errors on route change
   useEffect(() => {
     setLoginError("");
     setRegError("");
   }, [location.pathname]);
 
-  // Login then go to the home page
+  // Login then go to the home
   if (currentUser) return <Navigate to="/" replace />;
 
   const handleLogin = async (e: React.FormEvent) => {
@@ -61,7 +60,7 @@ const LoginRegister: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4 py-8">
+    <div className="min-h-screen flex items-center justify-center px-4 py-8 bg-blue-900">
       {/* Glass card with slide container */}
       <div className="relative w-full max-w-md bg-white/20 backdrop-blur-xl rounded-3xl shadow-2xl overflow-hidden border border-white/30">
         {/* Sliding wrapper */}
@@ -70,7 +69,7 @@ const LoginRegister: React.FC = () => {
             action === "register" ? "-translate-x-full" : "translate-x-0"
           }`}
         >
-          {/*  LOGIN FORM  */}
+          {/*  Login Form  */}
           <div className="w-full flex-shrink-0 p-8">
             <h2 className="text-3xl font-bold text-center text-white mb-8 drop-shadow-lg">
               Welcome Back
@@ -96,7 +95,7 @@ const LoginRegister: React.FC = () => {
                 />
               </div>
 
-              {/* Password with show/hide */}
+              {/* Password Section */}
               <div className="relative">
                 <FaLock className="absolute left-3 top-1/2 -translate-y-1/2 text-white/60" />
                 <input
@@ -116,7 +115,7 @@ const LoginRegister: React.FC = () => {
                 </button>
               </div>
 
-              {/* Remember & Forgot */}
+              {/* Remember & Forgot section */}
               <div className="flex items-center justify-between text-sm text-white/80">
                 <label className="flex items-center gap-2 cursor-pointer">
                   <input type="checkbox" className="accent-amber-400 rounded" />
@@ -144,7 +143,7 @@ const LoginRegister: React.FC = () => {
             </p>
           </div>
 
-          {/* REGISTER FORM */}
+          {/* Register Form section */}
           <div className="w-full flex-shrink-0 p-8">
             <h2 className="text-3xl font-bold text-center text-white mb-8 drop-shadow-lg">
               Join Us
@@ -157,7 +156,7 @@ const LoginRegister: React.FC = () => {
             )}
 
             <form onSubmit={handleRegister} className="space-y-5">
-              {/* Username (optional) */}
+              {/* Username section */}
               <div className="relative">
                 <FaUserAlt className="absolute left-3 top-1/2 -translate-y-1/2 text-white/60" />
                 <input
@@ -182,7 +181,7 @@ const LoginRegister: React.FC = () => {
                 />
               </div>
 
-              {/* Password with show/hide */}
+              {/* Password section */}
               <div className="relative">
                 <FaLock className="absolute left-3 top-1/2 -translate-y-1/2 text-white/60" />
                 <input
@@ -202,7 +201,7 @@ const LoginRegister: React.FC = () => {
                 </button>
               </div>
 
-              {/* Terms checkbox */}
+              {/* Terms checkbox section */}
               <label className="flex items-start gap-2 text-sm text-white/80 cursor-pointer">
                 <input type="checkbox" required className="accent-amber-400 rounded mt-1" />
                 I agree to the terms & conditions

@@ -45,7 +45,6 @@ const Navbar: React.FC = () => {
       requireAuth: true,
     },
     { to: "/all-courses", label: "All Courses", icon: <FaBookOpen /> },
-    { to: "/course-search", label: "Search", icon: <FaSearch /> },
     { to: "/course-videos", label: "Videos", icon: <FaVideo /> },
   ];
 
@@ -54,10 +53,10 @@ const Navbar: React.FC = () => {
   }, [currentUser]);
 
   return (
-    <nav className="sticky top-0 z-50 shadow-lg backdrop-blur-md border-b border-white/10">
+    <nav className="sticky bg-blue-900 top-0 z-50 shadow-lg backdrop-blur-md border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo / Brand */}
+          {/* Logo */}
           <Link
             to="/"
             className="flex items-center space-x-2 text-white hover:text-amber-300 transition-colors duration-200"
@@ -110,10 +109,10 @@ const Navbar: React.FC = () => {
 
                 {/* Dropdown */}
                 {isProfileDropdownOpen && (
-                  <div className="absolute right-0 mt-2 w-48 bg-white rounded-xl shadow-2xl py-2 z-50 animate-fade-in ring-1 ring-black/5">
+                  <div className="absolute right-0 mt-2 w-48 bg-blue-900 rounded-xl shadow-2xl py-2 z-50 animate-fade-in ring-1 ring-black/5">
                     <div className="px-4 py-2 text-sm text-white border-b border-gray-200 t">
                       Signed in as <br />
-                      <span className="font-semibold text-indigo-700">
+                      <span className="font-semibold text-black">
                         {currentUser.email}
                       </span>
                     </div>
